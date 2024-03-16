@@ -1,0 +1,93 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center center;
+    animation: daycycle 6s infinite both ease-in-out;   
+    padding: 0;
+}
+#orbit{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+#sun, #moon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    border-radius: 50%;
+}
+#sun{
+    width: 150px;
+    height: 150px;
+    background-color: #FDD300;
+    animation:  totaleclipseoftheheart 6s infinite both ease-in-out;
+}
+#moon{
+    width:  calc(150px - 4px);
+    height:  calc(150px - 4px);
+}
+#moon::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation: moonRotate 6s infinite both ease-in-out;
+}
+@keyframes daycycle {
+    0%{
+        background-color: white;
+    }
+    40%{
+        background-color: black;
+    }
+    60%{
+        background-color: black;
+    }
+    100%{
+        background-color: white;
+    }
+}
+@keyframes moonRotate{
+    0%{
+        background-color: white;
+        transform: translateX(148px);
+    }
+    40%{
+        background-color: black;
+        transform: translateX(0px);
+    }
+    60%{
+        background-color: black;
+        transform:  translateX(0px);
+    }
+    100%{
+        background-color: white;
+        transform: translateX(-148px);
+    }
+}
+@keyframes totaleclipseoftheheart {
+    0%{
+        box-shadow: 0 0 0 0 #FDD300;
+    }
+    20%{
+        box-shadow: 0 0 0 0 #FDD300;
+    }
+    40%{
+        box-shadow: 0 0 40px 10px #FDD300;
+    }
+    60%{
+        box-shadow: 0 0 40px 10px #FDD300;
+    }
+    80%{
+        box-shadow: 0 0 0 0 #FDD300;
+    }
+    100%{
+        box-shadow: 0 0 0 0 #FDD300;
+    }
+}

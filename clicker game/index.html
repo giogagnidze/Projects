@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click Game</title>
+
+</head>
+<body>
+  <div class="container">
+    <img src="./414713846_1587825201752776_5130951492838992114_n.jpg" alt="Image 1" id="image1" width="300">
+    <img src="./414469198_249404268168537_6505855705550566154_n.jpg" alt="Image 3" id="image3" width="300">
+    <img src="./413833610_902443397944716_4816636211855986282_n.jpg" alt="Image 2" id="image2" width="300">
+   
+    <p>Score: <span id="score">0</span></p>
+  </div>
+
+  <script>
+    let score = 0;
+
+    document.getElementById('image1').addEventListener('click', function() {
+    score += 1;
+    updateScore();
+    });
+
+    document.getElementById('image2').addEventListener('click', function() {
+    score -= 1;
+    updateScore();
+    });
+
+    document.getElementById('image3').addEventListener('click', function() {
+    score += 5;
+    updateScore();
+    });
+
+    function updateScore() {
+    document.getElementById('score').innerText = score;
+    }
+  </script>
+</body>
+</html>

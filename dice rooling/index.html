@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+
+    <style>
+        .dice{
+            margin-top: 300px;
+            border-radius: 25px;
+            border: 2px solid;
+            margin-left: 670px;
+            background-color: rgb(52, 52, 52);
+            border-color: rgb(100, 99, 99);
+            border-width: 3px;
+            color: white;
+            padding: 15px 32px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            transition: 0.5s;
+        }      
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<a class="dice" id="dice1" onclick="rollDice()" href="#">Roll the Dice</a>
+<p id="result"></p>
+<p id="winner"></p>
+<p id="score">Player Wins: 0, Losses: 0</p>
+<p id="computerscore">computer Wins: 0, Losses: 0</p>
+
+<script>
+let playerWins = 0;
+let playerLosses = 0;
+let ComputerWins = 0;
+let ComputerLosses = 0;
+
+function rollDice() {
+    let result = Math.floor(Math.random() * 6) + 1;
+    let computerMove =  Math.floor(Math.random() * 6) + 1;
+    document.getElementById('result').innerText = `You rolled a ${result}. Computer rolled a ${computerMove}`;
+
+    if (result === computerMove) {
+        document.getElementById('winner').innerText = 'Tie';
+    } else if (result > computerMove) {
+        document.getElementById('winner').innerText = 'You Win';
+        playerWins++;
+        ComputerLosses++;
+    } else if (result < computerMove) {
+        document.getElementById('winner').innerText = 'You Lose';
+        playerLosses++;
+        ComputerWins++;
+    }
+
+    document.getElementById('score').innerText = `Wins: ${playerWins}, Losses: ${playerLosses}`;
+    document.getElementById('computerscore').innerText = `Wins: ${ComputerWins}, Losses: ${ComputerLosses}`;
+}
+</script>
+
+</body>
+</html>
