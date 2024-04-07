@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+    color: red;
+    text-shadow:
+    0 0 10px rgb(255, 0, 0),
+    0 0 20px rgb(255, 0, 0),
+    0 0 60px rgb(255, 0, 0);
+}
+#button {
+    color: black;
+    padding: 16px 64px;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    box-shadow:
+    0 0 10px rgb(255, 0, 0),
+    0 0 20px rgb(255, 0, 0),
+    0 0 60px rgb(255, 0, 0);
+}
+#button1{
+    color: black;
+    padding: 16px 64px;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    box-shadow:
+    0 0 10px rgb(255, 0, 0),
+    0 0 20px rgb(255, 0, 0),
+    0 0 60px rgb(255, 0, 0);
+}
