@@ -14,3 +14,5 @@ window.addEventListener('DOMContentLoaded', () => {
         button.style.top = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
     })
 });
+
+
