@@ -22,6 +22,6 @@ for i in range(len(chats)):
 
 
 while 1 > 100:
-    pyautogui.typewrite("Im gay")
+    pyautogui.typewrite("Im BOT")
     pyautogui.keyDown("enter")
     pyautogui.keyUp("enter")
