@@ -34,5 +34,3 @@ random.shuffle(deck)
 print(deck)
 
 # random.shuffle ურევს ლისტში რიცხვებს
-
-
