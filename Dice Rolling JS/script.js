@@ -1,25 +1,19 @@
-let playerWins = 0;
-let playerLosses = 0;
-let ComputerWins = 0;
-let ComputerLosses = 0;
 
-function rollDice() {
-    let result = Math.floor(Math.random() * 6) + 1;
-    let computerMove =  Math.floor(Math.random() * 6) + 1;
-    document.getElementById('result').innerText = `You rolled a ${result}. Computer rolled a ${computerMove}`;
 
-    if (result === computerMove) {
-        document.getElementById('winner').innerText = 'Tie';
-    } else if (result > computerMove) {
-        document.getElementById('winner').innerText = 'You Win';
-        playerWins++;
-        ComputerLosses++;
-    } else if (result < computerMove) {
-        document.getElementById('winner').innerText = 'You Lose';
-        playerLosses++;
-        ComputerWins++;
+function rollDice(){
+
+    const numOfDice = document.getElementById("numOfDice").value
+    const diceResult = document.getElementById("diceResult")
+    const diceImages = document.getElementById("diceImages")
+    const values = [];
+    const images = [];
+
+    for(i = 0; i < numOfDice; i++){
+        const value = Math.floor(Math.random() * 6) + 1
+        values.push(value)
+        images.push(`<img src="dice_images/${value}.png" alt="Dice ${value}">`)
     }
 
-    document.getElementById('score').innerText = `Wins: ${playerWins}, Losses: ${playerLosses}`;
-    document.getElementById('computerscore').innerText = `Wins: ${ComputerWins}, Losses: ${ComputerLosses}`;
+    diceResult.textContent = `dice: ${values.join(', ')}`
+    diceImages.innerHTML = images.join('')
 }
