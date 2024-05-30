@@ -6,8 +6,6 @@ def add_task(todo_list):
 def remove_task(todo_list):
     if len(todo_list) == 0:
         print("The to-do list is empty.")
-        return
-
     print("Current to-do list:")
     for i in range(len(todo_list)):
         print(f"{i + 1}. {todo_list[i]}")
