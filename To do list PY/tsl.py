@@ -9,8 +9,8 @@ def remove_task(todo_list):
         return
 
     print("Current to-do list:")
-    for i, task in enumerate(todo_list, start=1):
-        print(f"{i}. {task}")
+    for i in range(len(todo_list)):
+        print(f"{i + 1}. {todo_list[i]}")
 
     index = int(input("Enter the index of the task to remove: ")) - 1
     if 0 <= index < len(todo_list):
@@ -24,8 +24,8 @@ def display_todo_list(todo_list):
         print("The to-do list is empty.")
     else:
         print("To-do list:")
-        for i, task in enumerate(todo_list, start=1):
-            print(f"{i}. {task}")
+        for i in range(len(todo_list)):
+            print(f"{i + 1}. {todo_list[i]}")
 
 def main():
     todo_list = []
@@ -49,5 +49,5 @@ def main():
             print("Exiting program. Goodbye!")
             break
         else:
-            print("Invalid choice! Please enter a number between 1 and 4.")
+            print("Invalid choice! Please enter a number between 1 and 4.")           
 main()

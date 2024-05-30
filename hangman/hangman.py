@@ -2,7 +2,6 @@ import random
 from words import listn
 
 def choose_word():
-    
     return random.choice(listn)
 
 def display_word(word, guessed_letters):
