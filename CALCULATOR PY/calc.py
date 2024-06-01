@@ -39,6 +39,6 @@ def calculator():
             print("Invalid input!")
 
         another_calculation = input("Do you want to perform another calculation? (y/n): ")
-        if another_calculation.lower() != 'y':
+        if another_calculation != 'y':
             break
 calculator()

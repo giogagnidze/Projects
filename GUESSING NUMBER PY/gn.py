@@ -1,4 +1,5 @@
 import random
+
 def guess_number(min_num, max_num):
     secret_number = random.randint(min_num, max_num)
     attempts = 0

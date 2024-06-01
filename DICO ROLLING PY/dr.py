@@ -1,25 +1,3 @@
-# dice rolling
-
-# import random
-
-# def roll_dice(num_dice):
-#     rolls = []
-#     for _ in range(num_dice):
-#         roll_result = random.randint(1, 6)  
-#         rolls.append(roll_result)
-#     return rolls
-
-# def main():
-#     num_dice = int(input("Enter the number of dice: "))
-
-#     rolls = roll_dice(num_dice)
-#     print("Result of rolling", num_dice, "dice:", rolls)
-
-# main()
-
-
-
-# dice rolling game against computer
 import random
 
 def roll_dice():
@@ -30,7 +8,7 @@ def main():
     print("You will compete against the computer to see who rolls the higher number.")
 
     while True:
-        input("Press Enter to roll the dice...")
+        input("Press Enter to roll the dice: ")
         user_roll = roll_dice()
         computer_roll = roll_dice()
 
@@ -45,7 +23,7 @@ def main():
             print("It's a tie!")
 
         play_again = input("Do you want to play again? (y/n): ")
-        if play_again.lower() != "y":
+        if play_again != "y":
             print("Thanks for playing!")
             break
 main()
