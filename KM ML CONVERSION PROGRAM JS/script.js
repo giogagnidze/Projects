@@ -1,4 +1,3 @@
-// K/M CONVERSION PROGRAM
 const textBox = document.getElementById("textBox");
 const toMiles = document.getElementById("toMiles");
 const toKilometers = document.getElementById("toKilometers");

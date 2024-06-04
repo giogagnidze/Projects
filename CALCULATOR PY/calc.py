@@ -23,22 +23,22 @@ def calculator():
     while True:
         choice = input("Enter choice (1/2/3/4): ")
 
-        if choice in ('1', '2', '3', '4'):
+        if choice in ("1", "2", "3", "4"):
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
 
-            if choice == '1':
+            if choice == "1":
                 print("Result:", add(num1, num2))
-            elif choice == '2':
+            elif choice == "2":
                 print("Result:", subtract(num1, num2))
-            elif choice == '3':
+            elif choice == "3":
                 print("Result:", multiply(num1, num2))
-            elif choice == '4':
+            elif choice == "4":
                 print("Result:", divide(num1, num2))
         else:
-            print("Invalid input!")
+            print("Invalid input! ")
 
         another_calculation = input("Do you want to perform another calculation? (y/n): ")
-        if another_calculation != 'y':
+        if another_calculation != "y":
             break
 calculator()

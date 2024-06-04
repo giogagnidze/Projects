@@ -3,7 +3,7 @@ const maxNum = 100;
 const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
 let attempts = 0;
-let running = true;
+
 
 function checkGuess() {
     let guessElement = document.getElementById('guessInput');
@@ -22,7 +22,7 @@ function checkGuess() {
             messageElement.textContent = "TOO HIGH! TRY AGAIN";
         } else {
             messageElement.textContent = "CORRECT! The answer was " + answer + ". It took you " + attempts + " attempts";
-            running = false;
+
         }
     }
 

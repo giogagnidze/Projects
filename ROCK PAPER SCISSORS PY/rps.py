@@ -1,5 +1,4 @@
 import random
-# Rock Paper Scissors
 def determine_winner(user_choice, computer_choice):
     if user_choice == computer_choice:
         return "It's a tie!"

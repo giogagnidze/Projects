@@ -14,11 +14,11 @@ def main():
     if choice == 1:
         kilometers = float(input("Enter the Kilometer: "))
         miles = km_to_miles(kilometers)
-        print(f"{kilometers} Kilometer is equal to {miles} Mile.")
+        print(kilometers, "Kilometer is equal to", miles, "Mile.")
     elif choice == 2:
         miles = float(input("Enter the Miles: "))
         kilometers = miles_to_km(miles)
-        print(f"{miles} Mile is equal to {kilometers} Kilometer.")
+        print(miles, "Mile is equal to", kilometers, "Kilometer.")
     else:
         print("Invalid choice!")
 
