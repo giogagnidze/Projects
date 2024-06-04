@@ -8,12 +8,12 @@ function convert(){
     if(toMiles.checked){
         temp = Number(textBox.value);
         temp *= 0.621371;
-        result.textContent = temp.toFixed(1) + " Miles";
+        result.textContent = temp + " Miles";
     }
     else if(toKilometers.checked){
         temp = Number(textBox.value);
         temp *= 1.60934;
-        result.textContent = temp.toFixed(1) + " Kilometers";
+        result.textContent = temp + " Kilometers";
     }
     else{
         result.textContent = "Select a unit";

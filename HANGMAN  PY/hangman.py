@@ -4,10 +4,10 @@ from words import listn
 def choose_word():
     return random.choice(listn)
 
-def display_word(word, guessed_letters):
+def display_word(word, letters):
     display = ""
     for i in word:
-        if i in guessed_letters:
+        if i in letters:
             display += i
         else:
             display += "_"
@@ -15,11 +15,11 @@ def display_word(word, guessed_letters):
 
 def hangman():
     word = choose_word()
-    guessed_letters = []
+    letters = []
     attempts = 5
 
     print("Welcome to Hangman!")
-    print(display_word(word, guessed_letters))
+    print(display_word(word, letters))
 
     while True:
         guess = input("Guess a letter: ").lower()
@@ -28,11 +28,11 @@ def hangman():
             print("Please enter a single letter.")
             continue
         
-        if guess in guessed_letters:
+        if guess in letters:
             print("You've already guessed that letter.")
             continue
 
-        guessed_letters.append(guess)
+        letters.append(guess)
 
         if guess not in word:
             attempts -= 1
@@ -44,7 +44,7 @@ def hangman():
         else:
             print("Correct!")
 
-        display = display_word(word, guessed_letters)
+        display = display_word(word, letters)
         print(display)
 
         if "_" not in display:
