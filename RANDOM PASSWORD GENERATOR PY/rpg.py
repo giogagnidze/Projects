@@ -20,6 +20,6 @@ def generate_password(length):
 def main():
     length = int(input("Enter the length of the password: ")) 
     password = generate_password(length)
-    print(f"Your password is: {password}")
+    print("Your password is:", password)
 
 main()
