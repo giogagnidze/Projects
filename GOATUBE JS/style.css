@@ -176,18 +176,13 @@ hr {
     margin-bottom: 6px;
 }
 
-.title a,
-span {
+.title a,span {
     text-decoration: none;
     color: rgb(96, 96, 96);
     font-size: 14px;
 }
-
 h1 {
     font-size: 20px;
     margin-bottom: 10px;
     color: rgb(3, 3, 3);
 }
-
-
-

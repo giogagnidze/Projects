@@ -21,4 +21,5 @@ def main():
     max_num = int(input("Enter the maximum number of the range: "))
     attempts = guess_number(min_num, max_num)
     print(f"Number of attempts: {attempts}")
+
 main()

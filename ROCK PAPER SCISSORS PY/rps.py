@@ -26,7 +26,7 @@ def play_game():
             print("Invalid choice! Please choose rock, paper, or scissors.")
             user_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
         computer_choice = random.choice(["rock", "paper", "scissors"])
-        
+
         print("You chose", user_choice)
         print("The computer chose", computer_choice)
         print(determine_winner(user_choice, computer_choice))
